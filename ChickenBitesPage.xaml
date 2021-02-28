@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="Final.ChickenBitesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Frame x:Name="ContentFrame">
+        <ScrollViewer>
+            <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <TextBlock Text="Chicken Bites" FontSize="24px"/>
+                <ComboBox Header="Pieces:" x:Name="cbxPieces" Width="500px">
+                    <ComboBoxItem Content="10 Bites" Tag="10" IsSelected="True"/>
+                    <ComboBoxItem Content="20 Bites" Tag="20"/>
+                </ComboBox>
+                <TextBlock Text="Dipping Sauce:"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox x:Name="chkSauce1" Content="No Sauce" Margin="0,0,5,0"/>
+                    <CheckBox x:Name="chkSauce2" Content="Blue Cheese"  Margin="0,0,5,0" Grid.Column="1"/>
+                    <CheckBox x:Name="chkSauce3" Content="Buffalo Blue Cheese" Margin="0,0,5,0" Grid.Column="2"/>
+                    <CheckBox x:Name="chkSauce4" Content="Cheddar Jalapeno" Margin="0,0,5,0" Grid.Column="3"/>
+                    <CheckBox x:Name="chkSauce5" Content="Creamy Dill" Margin="0,0,5,0" Grid.Row="1"/>
+                    <CheckBox x:Name="chkSauce6" Content="Creamy Garlic" Margin="0,0,5,0" Grid.Row="1" Grid.Column="1"/>
+                    <CheckBox x:Name="chkSauce7" Content="Honey Garlic" Margin="0,0,5,0" Grid.Row="1" Grid.Column="2"/>
+                    <CheckBox x:Name="chkSauce8" Content="Honey Mustard" Margin="0,0,5,0" Grid.Row="1" Grid.Column="3"/>
+                    <CheckBox x:Name="chkSauce9" Content="Italian Marinara" Margin="0,0,5,0" Grid.Row="2"/>
+                    <CheckBox x:Name="chkSauce10" Content="Mild Sauce" Margin="0,0,5,0" Grid.Row="2" Grid.Column="1"/>
+                    <CheckBox x:Name="chkSauce11" Content="Peppercorn Ranch" Margin="0,0,5,0" Grid.Row="2" Grid.Column="2"/>
+                    <CheckBox x:Name="chkSauce12" Content="Sriracha Creamy Garlic" Margin="0,0,5,0" Grid.Row="2" Grid.Column="3"/>
+                    <CheckBox x:Name="chkSauce13" Content="Sweet Chili Thai Sauce" Margin="0,0,5,0" Grid.Row="3"/>
+                    <CheckBox x:Name="chkSauce14" Content="Texas Bbq" Margin="0,0,5,0" Grid.Row="3" Grid.Column="1"/>
+                    <CheckBox x:Name="chkSauce15" Content="Sweet and Sour Sauce" Margin="0,0,5,0" Grid.Row="3" Grid.Column="2"/>
+                </Grid>
+                <Button x:Name="btnAdd" Content="Add To Cart" HorizontalAlignment="left" Margin="0,50,0,0"
+                    Click="btnAdd_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Frame>
+</Page>

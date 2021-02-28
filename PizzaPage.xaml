@@ -1,0 +1,142 @@
+﻿<Page
+    x:Class="Final.PizzaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Frame x:Name="ContentFrame">
+        <ScrollViewer>
+            <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="pizzaName" FontSize="28px" Margin="0,0,0,20"/>
+                <TextBlock Text="Dough / Sauce / Cheese" VerticalAlignment="Center" FontSize="24px"/>
+                <ComboBox Header="Size:" x:Name="cbxSize" Width="500px">
+                    <ComboBoxItem Content="Small" Tag="s"/>
+                    <ComboBoxItem Content="Medium" Tag="m" IsSelected="True"/>
+                    <ComboBoxItem Content="Large" Tag="l"/>
+                </ComboBox>
+                <ComboBox Header="Dough:" x:Name="cbxDough" Width="500px">
+                    <ComboBoxItem Content="Regular" Tag="reg" IsSelected="True"/>
+                    <ComboBoxItem Content="Regular Thin Crust" Tag="reg thin"/>
+                    <ComboBoxItem Content="Regular Thick Crust" Tag="reg thick"/>
+                    <ComboBoxItem Content="Whole Grain Crust" Tag="whole grain"/>
+                    <ComboBoxItem Content="Whole Grain Thin Crust" Tag="whole grain thin"/>
+                    <ComboBoxItem Content="Whole Grain Thick Crust" Tag="whole grain thick"/>
+                </ComboBox>
+                <ComboBox Header="Sauce:" x:Name="cbxSauce" Width="500px">
+                    <ComboBoxItem Content="No Sauce" Tag="no" IsSelected="True"/>
+                    <ComboBoxItem Content="Buffalo Blue Cheese Sauce" Tag="buffalo blue cheese"/>
+                    <ComboBoxItem Content="Creamy Garlic Sauce" Tag="creamy garlic"/>
+                    <ComboBoxItem Content="Chipotle Sauce" Tag="chipotle"/>
+                    <ComboBoxItem Content="Home Style Italian Tomato Sauce" Tag="home style italian tomato"/>
+                    <ComboBoxItem Content="Hot Sauce" Tag="hot"/>
+                    <ComboBoxItem Content="Pesto Sauce" Tag="Pesto"/>
+                    <ComboBoxItem Content="Sweet Chili Thai Sauce" Tag="Sweet Chili Thai"/>
+                    <ComboBoxItem Content="Tandoori Sauce" Tag="Tandoori"/>
+                    <ComboBoxItem Content="Texas Bbq" Tag="Texas Bbq"/>
+                </ComboBox>
+                <ComboBox Header="Cheese:" x:Name="cbxCheese" Width="500px">
+                    <ComboBoxItem Content="No Cheese" Tag="no" IsSelected="True"/>
+                    <ComboBoxItem Content="Dairy-Free Cheeze" Tag="dairy free"/>
+                    <ComboBoxItem Content="Four Cheese" Tag="four"/>
+                    <ComboBoxItem Content="Mozzarella Cheese" Tag="Mozzarella"/>
+                </ComboBox>
+                <TextBlock Text="Toppings" FontSize="24px"/>
+                <StackPanel Orientation="Horizontal" Width="500" Spacing="36" HorizontalAlignment="Left">
+                    <Button x:Name="btnVeggie" Content="Veggie" Click="btnVeggie_Click"/>
+                    <Button x:Name="btnMeat" Content="Meat" Click="btnMeat_Click"/>
+                    <Button x:Name="btnCheese" Content="Cheese" Click="btnCheese_Click"/>
+                </StackPanel>
+                <Grid x:Name="veggieTopping" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox x:Name="chkTopping1" Content="Artichokes" Tag="2" Margin="0,0,5,0"/>
+                    <CheckBox x:Name="chkTopping2" Content="Brocolli" Tag="2" Margin="0,0,5,0" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping3" Content="Bruschetta" Tag="2" Margin="0,0,5,0" Grid.Column="2"/>
+                    <CheckBox x:Name="chkTopping4" Content="Caramelized Onion" Tag="2" Margin="0,0,5,0" Grid.Column="3"/>
+                    <CheckBox x:Name="chkTopping5" Content="Cilantro" Tag="2" Margin="0,0,5,0" Grid.Row="1"/>
+                    <CheckBox x:Name="chkTopping6" Content="Fire Roasted Red Peppers" Tag="2" Margin="0,0,5,0" Grid.Row="1" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping7" Content="Fresh Mushrooms" Tag="2" Margin="0,0,5,0" Grid.Row="1" Grid.Column="2"/>
+                    <CheckBox x:Name="chkTopping8" Content="Green Olives" Tag="2" Margin="0,0,5,0" Grid.Row="1" Grid.Column="3"/>
+                    <CheckBox x:Name="chkTopping9" Content="Green Peppers" Tag="2" Margin="0,0,5,0" Grid.Row="2"/>
+                    <CheckBox x:Name="chkTopping10" Content="Grilled Zucchini" Tag="2" Margin="0,0,5,0" Grid.Row="2" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping11" Content="Hot Banana Peppers" Tag="2" Margin="0,0,5,0" Grid.Row="2" Grid.Column="2"/>
+                    <CheckBox x:Name="chkTopping12" Content="Jalapeno Peppers" Tag="2" Margin="0,0,5,0" Grid.Row="2" Grid.Column="3" />
+                    <CheckBox x:Name="chkTopping13" Content="Kalamata Olives" Tag="2" Margin="0,0,5,0" Grid.Row="3"/>
+                    <CheckBox x:Name="chkTopping14" Content="Pineapple" Tag="2" Margin="0,0,5,0" Grid.Row="3" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping15" Content="Plant-Based Chorizo Crumble" Tag="2" Margin="0,0,5,0" Grid.Row="3" Grid.Column="2"/>
+                    <CheckBox x:Name="chkTopping16" Content="Plant-Based Pepproni" Tag="2" Margin="0,0,5,0" Grid.Row="3" Grid.Column="3"/>
+                    <CheckBox x:Name="chkTopping17" Content="Roasted Garlic" Tag="2" Margin="0,0,5,0" Grid.Row="4"/>
+                    <CheckBox x:Name="chkTopping18" Content="Roma Tomatoes" Tag="2" Margin="0,0,5,0" Grid.Row="4" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping19" Content="Spinach" Tag="2" Margin="0,0,5,0" Grid.Row="4" Grid.Column="2"/>
+                    <CheckBox x:Name="chkTopping20" Content="Sun-Dried Tomatoes" Tag="2" Margin="0,0,5,0" Grid.Row="4" Grid.Column="4"/>
+                </Grid>
+                <Grid x:Name="meatTopping" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox x:Name="chkTopping21" Content="Anchovies" Tag="2" Margin="0,0,5,0"/>
+                    <CheckBox x:Name="chkTopping22" Content="Bacon Crumble" Tag="2" Margin="0,0,5,0" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping23" Content="Becon Strips" Tag="3" Margin="0,0,5,0" Grid.Column="2"/>
+                    <CheckBox x:Name="chkTopping24" Content="Buffalo Chicken" Tag="3" Margin="0,0,5,0" Grid.Column="3"/>
+                    <CheckBox x:Name="chkTopping25" Content="Chipotle Chinken" Tag="3" Margin="0,0,5,0" Grid.Row="1"/>
+                    <CheckBox x:Name="chkTopping26" Content="Chipotle Steak" Tag="3" Margin="0,0,5,0" Grid.Row="1" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping27" Content="Chorizo Sausage" Tag="2" Margin="0,0,5,0" Grid.Row="1" Grid.Column="2"/>
+                    <CheckBox x:Name="chkTopping28" Content="Grilled Chicken" Tag="3" Margin="0,0,5,0" Grid.Row="1" Grid.Column="3"/>
+                    <CheckBox x:Name="chkTopping29" Content="Ground Beef" Tag="2" Margin="0,0,5,0" Grid.Row="2"/>
+                    <CheckBox x:Name="chkTopping30" Content="Italian Ham" Tag="2" Margin="0,0,5,0" Grid.Row="2" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping31" Content="New York Style Pepperoni" Tag="2" Margin="0,0,5,0" Grid.Row="2" Grid.Column="2"/>
+                    <CheckBox x:Name="chkTopping32" Content="Pepperoni" Tag="2" Margin="0,0,5,0" Grid.Row="2" Grid.Column="3" />
+                    <CheckBox x:Name="chkTopping33" Content="Salami" Tag="2" Margin="0,0,5,0" Grid.Row="3"/>
+                    <CheckBox x:Name="chkTopping34" Content="Spicy Italian Sausage" Tag="2" Margin="0,0,5,0" Grid.Row="3" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping35" Content="Steak Strips" Tag="3" Margin="0,0,5,0" Grid.Row="3" Grid.Column="2"/>
+                </Grid>
+                <Grid x:Name="cheeseTopping" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox x:Name="chkTopping36" Content="Extra Cheese" Tag="3" Margin="0,0,5,0"/>
+                    <CheckBox x:Name="chkTopping37" Content="Extra Dairy-Free Cheeze" Tag="3" Margin="0,0,5,0" Grid.Column="1"/>
+                    <CheckBox x:Name="chkTopping38" Content="Feta Cheese" Tag="2" Margin="0,0,5,0" Grid.Column="2"/>
+                    <CheckBox x:Name="chkTopping39" Content="FourCheese Blend Topping" Tag="3" Margin="0,0,5,0" Grid.Column="3"/>
+                    <CheckBox x:Name="chkTopping40" Content="Goat Cheese" Tag="2" Margin="0,0,5,0" Grid.Row="1"/>
+                    <CheckBox x:Name="chkTopping41" Content="Parmesan Cheese" Tag="2" Margin="0,0,5,0" Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+                <Button x:Name="btnAdd" Content="Add To Cart" HorizontalAlignment="left" Margin="0,50,0,0"
+                    Click="btnAdd_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Frame>
+</Page>

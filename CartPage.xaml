@@ -1,0 +1,104 @@
+﻿<Page
+    x:Class="Final.CartPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Frame x:Name="ContentFrame">
+        <ScrollViewer>
+            <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="24,12,24,24">
+                <StackPanel x:Name="CartPanel" Visibility="Visible">
+                    <TextBlock Text="Your shopping cart is currently Empty." 
+                           x:Name="lblNoItem" FontSize="24px"/>
+                    <TextBlock x:Name="lblItems" Text="Order:" FontSize="24px" Visibility="Collapsed"/>
+                    <ListView x:Name="ItemList">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                <Setter Property="Padding" Value="0,8" />
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Grid Margin="50,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="4*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="125"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" 
+                                                   Text="{Binding Summary}" 
+                                                   HorizontalTextAlignment="Left"/>
+                                        <TextBlock Grid.Column="1"
+                                                   Text="{Binding CartPageSubTotal}"/>
+                                        <Button Grid.Column="2"
+                                                Content="Delete this item"
+                                                Click="btnDelete_Click"
+                                                Tag="{Binding Summary}"/>
+                                    </Grid>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Grid HorizontalAlignment="Right">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   Text="Subtotal:"
+                                   HorizontalAlignment="Right"/>
+                        <TextBlock x:Name="lblSubTotal"
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                   HorizontalAlignment="Right"/>
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="1"
+                                   Text="+ est. tax:"
+                                   HorizontalAlignment="Right"/>
+                        <TextBlock x:Name="lblTax" 
+                                   Grid.Column="1"
+                                   Grid.Row="1"
+                                   HorizontalAlignment="Right"/>
+                        <TextBlock Grid.Column="0" 
+                                   Grid.Row="2"
+                                   FontSize="20px"
+                                   Text="Total:"
+                                   HorizontalAlignment="Right"/>
+                        <TextBlock x:Name="lblTotal"
+                                   Grid.Column="1"
+                                   Grid.Row="2"
+                                   FontSize="20px"
+                                   HorizontalAlignment="Right"/>
+                    </Grid>
+                </StackPanel>
+                <Grid Margin="0,4,0,0">
+                    <Button x:Name="btnEmptyCart" Content="Empty Cart"
+                            HorizontalAlignment="Right"
+                            Click="btnEmptyCart_Click"
+                            Margin="0,0,220,0" Width="100"/>
+                    <Button x:Name="btnRefresh" Content="Refresh"
+                            HorizontalAlignment="Right"
+                            Click="btnRefresh_Click"
+                            Margin="0,0,110,0"
+                            Width="100"/>
+                    <Button x:Name="btnCheckOut" Content="Check out"
+                            HorizontalAlignment="Right"
+                            Click="btnCheckOut_Click"
+                            Width="100"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Frame>
+</Page>

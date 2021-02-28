@@ -1,0 +1,28 @@
+﻿<ContentDialog
+    x:Class="Final.LoginDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Member Login"
+    PrimaryButtonText="Login"
+    CloseButtonText="Cancel"
+    PrimaryButtonClick="LoginDialog_LoginClick"
+    CloseButtonClick="LoginDialog_CancelClick">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="userid" PlaceholderText="Email.."/>
+        <PasswordBox x:Name="password" PlaceholderText="Password.." Grid.Row="1"/>
+        <HyperlinkButton Content="Not a member yet? Join now!" Grid.Row="2" Click="HyperlinkButton_Click"/>
+        <TextBlock x:Name="errorMsg" Foreground="Red" Grid.Row="3" Visibility="Collapsed"
+                   Text="Invalid username/password, try again."/>
+    </Grid>
+</ContentDialog>

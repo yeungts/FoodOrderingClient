@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="Final.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Final"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <Image Source="/Assets/Capture.PNG" Margin="122,0,122,48" Height="434" Width="540" />
+            <TextBlock Text="Welcome to Papa Dario's Pizza!" HorizontalAlignment="Center"
+                   FontSize="36px"/>
+            <TextBlock Text="Navigate yourself with the menu bar on the left and order the food you want today!"
+                       HorizontalAlignment="Center" FontSize="24px"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
