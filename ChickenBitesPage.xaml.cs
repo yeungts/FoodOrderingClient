@@ -3,7 +3,7 @@
 // CREATE DATE: 5 AUG 2020
 // PURPOSE: PROCESS THE SELECTED OPTION FOR CHICKEN BITES PAGE
 // ===============================
-using Final.models;
+using FoodOrderingClient.models;
 using System;
 using System.Collections.Generic;
 using Windows.UI.Popups;
@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Final
+namespace FoodOrderingClient
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

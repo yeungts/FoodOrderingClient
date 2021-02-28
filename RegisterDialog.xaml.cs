@@ -3,7 +3,7 @@
 // CREATE DATE: 6 AUG 2020
 // PURPOSE: PROCESS THE INPUT AND SELECTED OPTION FOR REGISTRATION DIALOG
 // ===============================
-using Final.models;
+using FoodOrderingClient.models;
 using System;
 using System.Security.Cryptography;
 using Windows.UI.Popups;
@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Controls;
 
 // The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Final
+namespace FoodOrderingClient
 {
     public sealed partial class RegisterDialog : ContentDialog
     {

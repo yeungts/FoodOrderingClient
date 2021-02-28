@@ -3,14 +3,14 @@
 // CREATE DATE: 7 AUG 2020
 // PURPOSE: PROCESS INPUT FOR FEEDBACK PAGE
 // ===============================
-using Final.models;
+using FoodOrderingClient.models;
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Final
+namespace FoodOrderingClient
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

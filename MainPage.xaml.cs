@@ -3,7 +3,7 @@
 // CREATE DATE: 5 AUG 2020
 // PURPOSE: LOAD THE CORRESOPNDING PAGE UPON USER SELECTION
 // ===============================
-using Final.models;
+using FoodOrderingClient.models;
 using System;
 using System.Collections.Generic;
 using Windows.Foundation.Metadata;
@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace Final
+namespace FoodOrderingClient
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

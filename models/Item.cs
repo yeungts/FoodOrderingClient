@@ -5,7 +5,7 @@
 // ===============================
 using System;
 
-namespace Final.models
+namespace FoodOrderingClient.models
 {
     abstract class Item
     {

@@ -6,7 +6,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Final.models
+namespace FoodOrderingClient.models
 {
     class ChickenBite : Item
     {

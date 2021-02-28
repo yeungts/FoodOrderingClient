@@ -3,7 +3,7 @@
 // CREATE DATE: 5 AUG 2020
 // PURPOSE: MODEL FOR DEFINING A TYPES OF PIZZA
 // ===============================
-namespace Final.models
+namespace FoodOrderingClient.models
 {
     class PizzaType
     {

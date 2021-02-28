@@ -3,7 +3,7 @@
 // CREATE DATE: 9 AUG 2020
 // PURPOSE: INDICATE HOW SHOULD THE APP INTERACT WITH THE DATABASE
 // ===============================
-namespace Final.models
+namespace FoodOrderingClient.models
 {
     interface IDBFunctions
     {

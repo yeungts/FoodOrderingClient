@@ -11,7 +11,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Final.models
+namespace FoodOrderingClient.models
 {
     class GlobalPropertiesAndDatabaseConnector : IDBFunctions
     {
